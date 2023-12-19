@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js"></script>
+	<script>
+
+        import opentype from "opentype.js";
+
+        const buffer = fetch("arial.ttf").then(res => res.arrayBuffer());
+
+        buffer.then(data => {
+            const font = opentype.parse(data);
+            console.log(font);
+        })
+
+
+    </script>
+  </body>
+
+
+</html>
